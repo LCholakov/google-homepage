@@ -17,11 +17,11 @@
             .push-flex-right {
                 margin-left: auto;
             }
-            img {
+            .header-icon {
                 padding: 0px;
                 border-radius: 50%;
             }
-            img:hover {
+            .header-icon:hover {
                 box-shadow: 0px 0px 10px #aaa;
                 -moz-box-shadow: 0px 0px 10px #aaa;
                 -webkit-box-shadow: 0px 0px 10px #aaa;
@@ -31,10 +31,27 @@
             a {
                 color:black;
                 text-decoration: none;
-                padding: 5px;
+                padding: 10px;
             }
             a:hover {
                 text-decoration: underline;
+            }
+            #main-content {
+                margin: 10% 20% 20% 20%;
+            }
+            #daily-image {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10%;
+                display: block;
+                width: 75%;
+            }
+            #search-query {
+                border-radius: 50px;
+                position: relative;
+                vertical-align: center;
+                width: 100%;
+                font-size: 16px;
             }
         </style>
     </head>
@@ -43,8 +60,13 @@
             <div class="push-flex-right"></div>
             <a href="https://mail.google.com/mail">Gmail</a>
             <a href="https://www.google.com/imghp">Images</a>
-            <a href="https://about.google/intl/en/products/"><img src="Sources/btn-apps-gallery.png" alt="Button to open Google apps." height="20px"></a>
-            <a href="https://accounts.google.com/"><img src="Sources/user-icon.png" alt="Button to open your account." height="30px"></a>
+            <a href="https://about.google/intl/en/products/"><img class="header-icon" src="Sources/btn-apps-gallery.png" alt="Button to open Google apps." height="20px"></a>
+            <a href="https://accounts.google.com/"><img class="header-icon" src="Sources/user-icon.png" alt="Button to open your account." height="30px"></a>
         </div>
+        <div id="main-content">
+            <img id="daily-image" src="Sources/google-homepage-image-tim-berglings-32nd-birthday.gif">
+            <input type="text" id="search-query" name="search-query">
+        </div>
+
     </body>
 </html>
