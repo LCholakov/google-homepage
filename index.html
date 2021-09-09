@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
         <title>Search</title>
         <link rel="icon" href="/Sources/google-short-logo.png">
         <style type="text/css">
-            body {
-                font-family: Roboto, Arial;
-            }
+            
+            body { font-family: Roboto, Arial; }
+
             .header-box {
                 display: flex;
                 margin-left: auto;
                 align-items: center;
                 font-size: 12px;
             }
-            .push-flex-right {
-                margin-left: auto;
-            }
+
+            .push-flex-right { margin-left: auto; }
+
             .header-icon {
                 padding: 0px;
                 border-radius: 50%;
             }
+
             .header-icon:hover {
                 box-shadow: 0px 0px 10px #aaa;
                 -moz-box-shadow: 0px 0px 10px #aaa;
@@ -28,17 +31,17 @@
                 -khtml-box-shadow: 0px 0px 10px #aaa;
                 background-color: #ddd;
             }
-            a {
+
+            .header-links {
                 color:black;
                 text-decoration: none;
                 padding: 10px;
             }
-            a:hover {
-                text-decoration: underline;
-            }
-            #main-content {
-                margin: 10% 20% 20% 20%;
-            }
+
+            a:hover { text-decoration: underline; }
+
+            #main-content { margin: 10% 15% 15% 15%; }
+
             #daily-image {
                 margin-left: auto;
                 margin-right: auto;
@@ -46,26 +49,63 @@
                 display: block;
                 width: 75%;
             }
+
+            .search-field-icons i { position: absolute; }
+          
+            .search-field-icons {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+          
+            .icon {
+                padding: 10px 0px 0px 5px;
+                min-width: 40px;
+                text-align: center;
+                z-index: 5;
+                color:silver;
+            }
+            #search-query:valid + #clear-icon { visibility: visible; }
+
+            #clear-icon { margin-left: -45px; visibility: hidden; }
+
             #search-query {
                 border-radius: 50px;
+                border: 1px solid #dfe1e5;
                 position: relative;
                 vertical-align: center;
                 width: 100%;
-                font-size: 16px;
+                height: 40px;
+                font-size: 14px;
+                outline: none;
+                padding-left: 50px;
+                -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+                -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+                box-sizing: border-box;
+            }
+
+            #search-query:hover {
+                box-shadow: 0px 0px 15px #dfe1e5;
+                -moz-box-shadow: 0px 0px 15px #dfe1e5;
+                -webkit-box-shadow: 0px 0px 15px #dfe1e5;
+                -khtml-box-shadow: 0px 0px 15px #dfe1e5;
             }
         </style>
     </head>
     <body>
         <div class="header-box">
             <div class="push-flex-right"></div>
-            <a href="https://mail.google.com/mail">Gmail</a>
-            <a href="https://www.google.com/imghp">Images</a>
-            <a href="https://about.google/intl/en/products/"><img class="header-icon" src="Sources/btn-apps-gallery.png" alt="Button to open Google apps." height="20px"></a>
-            <a href="https://accounts.google.com/"><img class="header-icon" src="Sources/user-icon.png" alt="Button to open your account." height="30px"></a>
+            <a class="header-links" href="https://mail.google.com/mail">Gmail</a>
+            <a class="header-links" href="https://www.google.com/imghp">Images</a>
+            <a class="header-links" href="https://about.google/intl/en/products/" target="_blank" rel="noopener noreferrer"><img class="header-icon" src="Sources/btn-apps-gallery.png" alt="Button to open Google apps." height="20px"></a>
+            <a class="header-links" href="https://accounts.google.com/" target="_blank" rel="noopener noreferrer"><img class="header-icon" src="Sources/user-icon.png" alt="Button to open your account." height="30px"></a>
         </div>
         <div id="main-content">
-            <img id="daily-image" src="Sources/google-homepage-image-tim-berglings-32nd-birthday.gif">
-            <input type="text" id="search-query" name="search-query">
+            <a href="https://www.youtube.com/watch?time_continue=2&v=BxOEj8ZeX2g&feature=emb_title" target="_blank" rel="noopener noreferrer"><img id="daily-image" src="Sources/google-homepage-image-tim-berglings-32nd-birthday.gif" alt="Colorful image of a DJ playing on a keyboard. Tribute to Tim Berling's 32nd birthday."></a>
+            <div class="search-field-icons">
+                <i class="fa fa-search icon"></i>
+                <input type="text" id="search-query" name="search-query" required>
+                <i class="fa fa-close icon" id="clear-icon"></i>
+            </div>
         </div>
 
     </body>
