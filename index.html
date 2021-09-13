@@ -89,6 +89,25 @@
                 -webkit-box-shadow: 0px 0px 15px #dfe1e5;
                 -khtml-box-shadow: 0px 0px 15px #dfe1e5;
             }
+            
+            #search-buttons { margin: 30px auto; width: 60%; }
+            
+            button {
+                color: #3c4043;
+                background-color: #f8f9fa;
+                margin: 5px;
+                padding: 10px 20px 10px 20px;
+                border: 1px solid #f8f9fa;
+                border-radius: 5px;
+            }
+            button:hover {
+                border: 1px solid #dadce0;
+                box-shadow: 0px 2px 3px #dadce0;
+                -moz-box-shadow: 0px 2px 3px #dadce0;
+                -webkit-box-shadow: 0px 2px 3px #dadce0;
+                -khtml-box-shadow: 0px 2px 3px #dadce0;
+            }
+            #lang-suggestions { padding: 300px auto; width: 60%; }
         </style>
     </head>
     <body>
@@ -106,7 +125,12 @@
                 <input type="text" id="search-query" name="search-query" required>
                 <i class="fa fa-close icon" id="clear-icon"></i>
             </div>
-        </div>
 
+            <div id="search-buttons">
+                <button>Google Search</button>
+                <button>I'm Feeling Lucky</button>
+            </div>
+            <label id="lang-suggestions">Google offered in: български magyar</label>
+        </div>
     </body>
 </html>
