@@ -100,6 +100,7 @@
                 border: 1px solid #f8f9fa;
                 border-radius: 5px;
             }
+
             button:hover {
                 border: 1px solid #dadce0;
                 box-shadow: 0px 2px 3px #dadce0;
@@ -107,9 +108,46 @@
                 -webkit-box-shadow: 0px 2px 3px #dadce0;
                 -khtml-box-shadow: 0px 2px 3px #dadce0;
             }
-            #lang-suggestions { padding: 300px auto; width: 60%; }
+
+            #lang-suggestions { 
+                font-size: 14px; 
+                color: #3c4043;
+                text-align: center;
+                display: block;
+            }
+            
+            .footer-links {
+                color:black;
+                text-decoration: none;
+                padding: 10px;
+                color: #70757a;
+                font-size: 14px;
+            }
+
+            #footer {
+                background-color: #f2f2f2;
+                padding: 20px;
+                margin: 0px -10px 0px -10px;
+                width: 100%;
+                height: 70px;
+                position:absolute;
+                bottom:0;
+            }
+
+            #footer-row1 {
+                display: block;
+            }
+
+            #footer-row2 {
+                border-top: 1px solid #dadce0;
+                padding-top: 15px;
+                padding-left: 40px;
+                display: block;
+            }
         </style>
+
     </head>
+    
     <body>
         <div class="header-box">
             <div class="push-flex-right"></div>
@@ -130,7 +168,24 @@
                 <button>Google Search</button>
                 <button>I'm Feeling Lucky</button>
             </div>
-            <label id="lang-suggestions">Google offered in: български magyar</label>
+            <label id="lang-suggestions">Google offered in: <a style="color:blue;">български</a> <a style="color:blue;">magyar</a></label>
         </div>
     </body>
+    <footer>
+        <div id="footer">
+            <flexbox id="footer-row1">
+                <label id="footer-location" style="color: #6f6f6f;">Hungary</label>
+            </flexbox><br>
+            <flexbox id="footer-row2">
+                <a class="footer-links" href="">About</a>
+                <a class="footer-links" href="">Advertising</a>
+                <a class="footer-links" href="">Business</a>
+                <a class="footer-links" href="">How Search works</a>
+                <a class="footer-links" href="">Privacy</a>
+                <a class="footer-links" href="">Terms</a>
+                <a class="footer-links" href="">Settings</a>
+            </flexbox>
+            <!-- #f2f2f2 -->
+        </div>
+    </footer>
 </html>
